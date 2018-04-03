@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2018-04-03T06:13:29.249Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://yoursite.com/child/"/>
+  <updated>2018-04-03T02:45:23.071Z</updated>
+  <id>http://yoursite.com/child/</id>
   
   <author>
     <name>Don</name>
@@ -17,30 +17,9 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="http://yoursite.com/2018/04/03/test/"/>
-    <id>http://yoursite.com/2018/04/03/test/</id>
-    <published>2018-04-03T03:52:48.000Z</published>
-    <updated>2018-04-03T06:13:29.249Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="THIS-IS-A-TEST-POST"><a href="#THIS-IS-A-TEST-POST" class="headerlink" title="THIS IS A TEST POST"></a>THIS IS A TEST POST</h1><p>wow so test</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;THIS-IS-A-TEST-POST&quot;&gt;&lt;a href=&quot;#THIS-IS-A-TEST-POST&quot; class=&quot;headerlink&quot; title=&quot;THIS IS A TEST POST&quot;&gt;&lt;/a&gt;THIS IS A TEST POST&lt;/h1&gt;&lt;p&gt;wo
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2018/04/03/hello-world/"/>
-    <id>http://yoursite.com/2018/04/03/hello-world/</id>
+    <link href="http://yoursite.com/child/2018/04/03/hello-world/"/>
+    <id>http://yoursite.com/child/2018/04/03/hello-world/</id>
     <published>2018-04-03T02:45:23.070Z</published>
     <updated>2018-04-03T02:45:23.071Z</updated>
     

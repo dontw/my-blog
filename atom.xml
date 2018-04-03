@@ -6,7 +6,7 @@
   <link href="/my-blog/atom.xml" rel="self"/>
   
   <link href="https://dontw.github.io/my-blog/"/>
-  <updated>2018-04-03T02:45:23.071Z</updated>
+  <updated>2018-04-03T08:15:24.525Z</updated>
   <id>https://dontw.github.io/my-blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Copying Array in Javascript</title>
+    <link href="https://dontw.github.io/my-blog/2018/04/03/Javascript/"/>
+    <id>https://dontw.github.io/my-blog/2018/04/03/Javascript/</id>
+    <published>2018-04-03T07:37:14.000Z</published>
+    <updated>2018-04-03T08:15:24.525Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="遭遇狀況"><a href="#遭遇狀況" class="headerlink" title="遭遇狀況"></a>遭遇狀況</h1><p>用 map 修改 array 內 object 的 property 值時，發現更動值會直接動到原本 object，所以需要先複製一個陣列來讓我做修改。</p><h1 id="複製方式"><a href="#複製方式" class="headerlink" title="複製方式"></a>複製方式</h1><p><img src="https://i.stack.imgur.com/OnwBf.png" alt="array clone type"></p><p>淺層複製:</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr.slice()</span><br><span class="line">arr.concat()</span><br><span class="line">arr.splice(<span class="number">0</span>)</span><br></pre></td></tr></table></figure><p>深層複製(複製 object, array 內的 primitive 值):</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr1 = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(arr))</span><br></pre></td></tr></table></figure><p>超深層複製(連 object, array 內的 function 都複製 <strong>要用插件</strong>):</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr2 = $.extend(<span class="literal">true</span>, [], arr1) <span class="comment">// jQuery.js needed</span></span><br><span class="line">arr2 = _.extend(arr1) <span class="comment">// Underscore.js needed</span></span><br><span class="line">arr2 = _.cloneDeep(arr1) <span class="comment">// Lo-dash.js needed</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;遭遇狀況&quot;&gt;&lt;a href=&quot;#遭遇狀況&quot; class=&quot;headerlink&quot; title=&quot;遭遇狀況&quot;&gt;&lt;/a&gt;遭遇狀況&lt;/h1&gt;&lt;p&gt;用 map 修改 array 內 object 的 property 值時，發現更動值會直接動到原本 object，所以需要
+      
+    
+    </summary>
+    
+    
+      <category term="javascript" scheme="https://dontw.github.io/my-blog/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

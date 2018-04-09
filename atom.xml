@@ -6,7 +6,7 @@
   <link href="/my-blog/atom.xml" rel="self"/>
   
   <link href="https://dontw.github.io/my-blog/"/>
-  <updated>2018-04-03T08:15:24.525Z</updated>
+  <updated>2018-04-09T06:42:39.534Z</updated>
   <id>https://dontw.github.io/my-blog/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>canvas-download</title>
+    <link href="https://dontw.github.io/my-blog/2018/04/09/canvas-download/"/>
+    <id>https://dontw.github.io/my-blog/2018/04/09/canvas-download/</id>
+    <published>2018-04-09T06:21:25.000Z</published>
+    <updated>2018-04-09T06:42:39.534Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="遭遇狀況"><a href="#遭遇狀況" class="headerlink" title="遭遇狀況"></a>遭遇狀況</h1><p>需要將 canvas 轉成圖片並讓使用者點擊某個地方後可以把圖片下載至本地端</p><h1 id="canvas-轉圖片"><a href="#canvas-轉圖片" class="headerlink" title="canvas 轉圖片"></a>canvas 轉圖片</h1><p>使用 <a href="https://developer.mozilla.org/zh-TW/docs/Web/API/HTMLCanvasElement/toDataURL" target="_blank" rel="noopener"><code>HTMLCanvasElement.toDataURL()</code></a> 將 canvas 元素轉為 base64 的 dataUrl</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> canvas = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'canvas'</span>)[<span class="number">0</span>] <span class="comment">//抓取canvas元素</span></span><br><span class="line"><span class="keyword">let</span> dataUrl = canvas.toDataURL() <span class="comment">//回傳base64</span></span><br></pre></td></tr></table></figure><h1 id="下載功能"><a href="#下載功能" class="headerlink" title="下載功能"></a>下載功能</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">clickToDownload</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    e.preventDefault() <span class="comment">// 消除連結原有功能</span></span><br><span class="line">    <span class="keyword">let</span> link = <span class="built_in">document</span>.querySelector(<span class="string">'.link'</span>) <span class="comment">//指定連結元素</span></span><br><span class="line">    link.setAttribute(<span class="string">'href'</span>, dataUrl) <span class="comment">// 設定連結為剛剛canvas轉的dataurl</span></span><br><span class="line">    link.setAttribute(<span class="string">'download'</span>, fileName) <span class="comment">// 設定下載之檔案名稱</span></span><br><span class="line">    link.click() <span class="comment">// 模擬點擊連結</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;遭遇狀況&quot;&gt;&lt;a href=&quot;#遭遇狀況&quot; class=&quot;headerlink&quot; title=&quot;遭遇狀況&quot;&gt;&lt;/a&gt;遭遇狀況&lt;/h1&gt;&lt;p&gt;需要將 canvas 轉成圖片並讓使用者點擊某個地方後可以把圖片下載至本地端&lt;/p&gt;
+&lt;h1 id=&quot;canvas-轉圖片&quot;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Copying Array in Javascript</title>

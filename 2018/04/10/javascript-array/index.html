@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="zh-tw"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> javascript-array(持續新增) · Don's Coding Blog</title><meta name="description" content="javascript-array(持續新增) - Don"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/my-blog/favicon.png"><link rel="stylesheet" href="/my-blog/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://dontw.github.io/my-blog/atom.xml" title="Don's Coding Blog"></head><body><div class="wrap"><header><div style="display: flex;justify-content: center;align-items: center;" class="wrapper"><a href="/my-blog/" class="logo-link"><img src="/my-blog/Big_Doge.gif" alt="logo" style="border-radius:50%; margin-right:16px; margin-top:5px;"></a><h1 class="title">Don's Coding Blog</h1></div><ul class="nav nav-list"><li class="nav-list-item"><a href="/my-blog/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/my-blog/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/dontw" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">javascript-array(持續新增)</h1><div class="post-info">2018年4月10日</div><div class="post-content"><h1 id="遭遇状况"><a href="#遭遇状况" class="headerlink" title="遭遇状况"></a>遭遇状况</h1><p>靠杯一直忘記陣列要用啥處理，寫一篇整理一下</p>
+<ol>
+<li>splice()</li>
+<li>concat()</li>
+<li>forEach()</li>
+<li>join()</li>
+<li>map()</li>
+<li>pop()</li>
+<li>push()</li>
+<li>reduce()</li>
+<li>reverse()</li>
+<li>shift()</li>
+<li>unshift()</li>
+<li>slice()</li>
+<li>sort()</li>
+<li>filter()</li>
+</ol>
+<h1 id="Array-prototype-splice"><a href="#Array-prototype-splice" class="headerlink" title="Array.prototype.splice()"></a><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank" rel="noopener">Array.prototype.splice()</a></h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.splice(start[, deleteCounmt[, item1[,item2[,...]]]])</span><br></pre></td></tr></table></figure>
+<h2 id="parameters"><a href="#parameters" class="headerlink" title="parameters"></a>parameters</h2><p><code>start</code> :</p>
+<ol>
+<li>為 array 內要改動 element 的 index(起始為 0)</li>
+<li>若 index &gt;= 0 且 index &gt; array.length 則實際開始的 index 會被設為 array.length</li>
+<li>若 index &lt; 0 則從 array 最後一個 element 往前改動(起始為-1)</li>
+<li>若 index &lt; 0 且 其絕對值 &gt; array.length 則 實際開始的 index 會被設為 0</li>
+</ol>
+<p><code>deleteCount</code>:</p>
+<ol>
+<li>省略 =&gt; start 到 array 最後一個 element 全刪</li>
+<li>deleteCount &gt; 從 start 算起的所有 element 數量 =&gt; start 到 array 最後一個 element 全刪</li>
+<li>0, 負數 =&gt; 不會刪東西，但要加 item</li>
+</ol>
+<h2 id="return"><a href="#return" class="headerlink" title="return"></a>return</h2><ul>
+<li>沒東西被拿出來就 <code>[]</code></li>
+<li>有東西被拿出來就 <code>[拿出來的東西]</code></li>
+</ul>
+<h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> months = [<span class="string">'Jan'</span>, <span class="string">'March'</span>, <span class="string">'April'</span>, <span class="string">'June'</span>]</span><br><span class="line">months.splice(<span class="number">1</span>, <span class="number">0</span>, <span class="string">'Feb'</span>)</span><br><span class="line"><span class="comment">// 把 'Feb' 塞到目前陣列 index 1 的地方</span></span><br><span class="line"><span class="built_in">console</span>.log(months)</span><br><span class="line"><span class="comment">// expected output: Array ['Jan', 'Feb', 'March', 'April', 'June']</span></span><br><span class="line"></span><br><span class="line">months.splice(<span class="number">4</span>, <span class="number">1</span>, <span class="string">'May'</span>)</span><br><span class="line"><span class="comment">// 將目前 index 4 的 elemeny 替換為 另1個 'May'</span></span><br><span class="line"><span class="built_in">console</span>.log(months)</span><br><span class="line"><span class="comment">// expected output: Array ['Jan', 'Feb', 'March', 'April', 'May']</span></span><br></pre></td></tr></table></figure>
+</div></article></div></main><footer><div class="paginator"><a href="/my-blog/2018/04/09/canvas-download/" class="next">下一篇</a></div><div class="copyright"><p>© 2018 <a href="https://dontw.github.io/my-blog">Don</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
